@@ -1,0 +1,76 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    {{> systems/dcc/templates/actor-partial-pc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "Kith.Kith"}}</a>
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "Kith.KithAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+                    <div class="flexrow" data-skill="tracking">
+                      <label class="skill-check rollable" for="data.skills.tracking.value">{{localize "Kith.Tracking"}}</label>
+                      <input type="text" id="data.skills.tracking.value" name="data.skills.tracking.value" value="{{data.skills.tracking.value}}" data-dtype="String"/>
+                    </div>
+                    <div class="flexrow" data-skill="detectTraps">
+                      <label class="skill-check rollable" for="data.skills.detectTraps.value">{{localize "Kith.DetectTraps"}}</label>
+                      <input type="text" id="data.skills.detectTraps.value" name="data.skills.detectTraps.value" value="{{data.skills.detectTraps.value}}" data-dtype="String"/>
+                    </div>
+                    <div class="flexrow" data-skill="detectHiddenFoes">
+                      <label class="skill-check rollable" for="data.skills.detectHiddenFoes.value">{{localize "Kith.DetectHiddenFoes"}}</label>
+                      <input type="text" id="data.skills.detectHiddenFoes.value" name="data.skills.detectHiddenFoes.value" value="{{data.skills.detectHiddenFoes.value}}" data-dtype="String"/>
+                    </div>
+                    <div class="flexrow" data-skill="burnDie">
+                      <label class="skill-check rollable" for="data.skills.burnDie.die">{{localize "Kith.BurnDie"}}</label>
+                      <input type="text" id="data.skills.burnDie.die" name="data.skills.burnDie.die" value="{{data.skills.burnDie.die}}" data-dtype="String"/>
+                    </div>
+                </div>
+
+                <ul class="class-note flexcol">
+                  <li>
+                    {{localize "Kith.WildernessSurvivor"}}
+                    <ul>
+                      <li>{{localize "Kith.RecogniseMushroomsAndFouledWater"}}</li>
+                      <li>{{localize "Kith.TrackingSkills"}}</li>
+                    </ul>
+                  </li>
+                  <li>
+                    {{localize "Kith.ForceOfWill"}}
+                    <ul>
+                      <li>{{localize "Kith.BurnDieDescription"}}</li>
+                      <li>{{localize "Kith.BurnDieHealing"}}</li>
+                      <li>{{localize "Kith.BurnDieRecovery"}}</li>
+                    </ul>
+                  </li>
+                  <li>
+                    {{localize "Kith.Luck"}}</li>
+                    <ul>
+                      <li>{{localize "Kith.LuckDescription"}}</li>
+                    </ul>
+                  </li>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
