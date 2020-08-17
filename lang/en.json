@@ -13,5 +13,7 @@
   "Kith.RecogniseMushroomsAndFouledWater": "Kith automatically recognise mushrooms or fouled water",
   "Kith.Tracking": "Tracking",
   "Kith.TrackingSkills": "Kith apply their level as a bonus to tracking, and detection of traps and hidden foes ",
-  "Kith.WildernessSurvivor": "Wilderness Survivor"
+  "Kith.WildernessSurvivor": "Wilderness Survivor",
+
+  "dcc-kith.ActorSheetKith": "Kith"
 }
