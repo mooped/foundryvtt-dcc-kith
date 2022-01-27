@@ -13,7 +13,7 @@ class ActorSheetKith extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-kith/templates/actor-sheet-kith.html'
-    data.data.class.className = 'Kith'
+    data.data.class.className = game.i18n.localize('Kith.ActorSheetKith')
 
     // Add in Kith specific data if missing
     if (!data.data.skills.tracking) {
@@ -46,6 +46,13 @@ class ActorSheetKith extends DCCActorSheet {
           label: 'Kith.BurnDie',
           die: '1d3'
         }
+      })
+    }
+
+    if (data.data.details.sheetClass != 'Kith') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('Kith.ActorSheetKith'),
+        'data.details.sheetClass': 'Kith'
       })
     }
 
