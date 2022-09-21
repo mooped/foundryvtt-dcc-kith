@@ -10,13 +10,13 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetKith extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+  async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-kith/templates/actor-sheet-kith.html'
-    data.data.class.className = game.i18n.localize('Kith.ActorSheetKith')
+    data.system.class.className = game.i18n.localize('Kith.ActorSheetKith')
 
     // Add in Kith specific data if missing
-    if (!data.data.skills.tracking) {
+    if (!data.system.skills.tracking) {
       this.actor.update({
         'data.skills.tracking': {
           label: 'Kith.Tracking',
@@ -24,7 +24,7 @@ class ActorSheetKith extends DCCActorSheet {
         }
       })
     }
-    if (!data.data.skills.detectTraps) {
+    if (!data.system.skills.detectTraps) {
       this.actor.update({
         'data.skills.detectTraps': {
           label: 'Kith.DetectTraps',
@@ -32,7 +32,7 @@ class ActorSheetKith extends DCCActorSheet {
         }
       })
     }
-    if (!data.data.skills.detectHiddenFoes) {
+    if (!data.system.skills.detectHiddenFoes) {
       this.actor.update({
         'data.skills.detectHiddenFoes': {
           label: 'Kith.DetectHiddenFoes',
@@ -40,7 +40,7 @@ class ActorSheetKith extends DCCActorSheet {
         }
       })
     }
-    if (!data.data.skills.burnDie) {
+    if (!data.system.skills.burnDie) {
       this.actor.update({
         'data.skills.burnDie': {
           label: 'Kith.BurnDie',
@@ -49,7 +49,7 @@ class ActorSheetKith extends DCCActorSheet {
       })
     }
 
-    if (data.data.details.sheetClass != 'Kith') {
+    if (data.system.details.sheetClass != 'Kith') {
       this.actor.update({
         'data.class.className': game.i18n.localize('Kith.ActorSheetKith'),
         'data.details.sheetClass': 'Kith'

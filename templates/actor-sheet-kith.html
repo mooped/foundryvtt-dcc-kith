@@ -1,8 +1,8 @@
 <form class="{{cssClass}}" autocomplete="off">
  
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Kith" data-dtype="String"/>
-    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Kith" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
     {{> systems/dcc/templates/actor-partial-pc-header.html }}
@@ -12,10 +12,10 @@
         <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
         <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
         <a class="item" data-tab="class">{{localize "Kith.Kith"}}</a>
-        {{#if data.config.showSpells}}
+        {{#if system.config.showSpells}}
         <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
         {{/if}}
-        {{#if data.config.showSkills}}
+        {{#if system.config.showSkills}}
         <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
         {{/if}}
         <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
@@ -45,20 +45,20 @@
             <div class="class">
                 <div class="skills-container">
                     <div class="flexrow" data-skill="tracking">
-                      <label class="skill-check rollable" for="data.skills.tracking.value">{{localize "Kith.Tracking"}}</label>
-                      <input type="text" id="data.skills.tracking.value" name="data.skills.tracking.value" value="{{data.skills.tracking.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.tracking.value">{{localize "Kith.Tracking"}}</label>
+                      <input type="text" id="data.skills.tracking.value" name="system.skills.tracking.value" value="{{system.skills.tracking.value}}" data-dtype="String"/>
                     </div>
                     <div class="flexrow" data-skill="detectTraps">
-                      <label class="skill-check rollable" for="data.skills.detectTraps.value">{{localize "Kith.DetectTraps"}}</label>
-                      <input type="text" id="data.skills.detectTraps.value" name="data.skills.detectTraps.value" value="{{data.skills.detectTraps.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.detectTraps.value">{{localize "Kith.DetectTraps"}}</label>
+                      <input type="text" id="system.skills.detectTraps.value" name="system.skills.detectTraps.value" value="{{system.skills.detectTraps.value}}" data-dtype="String"/>
                     </div>
                     <div class="flexrow" data-skill="detectHiddenFoes">
-                      <label class="skill-check rollable" for="data.skills.detectHiddenFoes.value">{{localize "Kith.DetectHiddenFoes"}}</label>
-                      <input type="text" id="data.skills.detectHiddenFoes.value" name="data.skills.detectHiddenFoes.value" value="{{data.skills.detectHiddenFoes.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.detectHiddenFoes.value">{{localize "Kith.DetectHiddenFoes"}}</label>
+                      <input type="text" id="system.skills.detectHiddenFoes.value" name="system.skills.detectHiddenFoes.value" value="{{system.skills.detectHiddenFoes.value}}" data-dtype="String"/>
                     </div>
                     <div class="flexrow" data-skill="burnDie">
-                      <label class="skill-check rollable" for="data.skills.burnDie.die">{{localize "Kith.BurnDie"}}</label>
-                      <input type="text" id="data.skills.burnDie.die" name="data.skills.burnDie.die" value="{{data.skills.burnDie.die}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.burnDie.die">{{localize "Kith.BurnDie"}}</label>
+                      <input type="text" id="system.skills.burnDie.die" name="system.skills.burnDie.die" value="{{system.skills.burnDie.die}}" data-dtype="String"/>
                     </div>
                 </div>
 

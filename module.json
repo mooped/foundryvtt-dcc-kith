@@ -1,12 +1,30 @@
 {
+  "id": "dcc-kith",
   "name": "dcc-kith",
   "title": "DCC Kith Sheets",
   "description": "Kith Sheets for Dungeon Crawl Classics in FoundryVTT!",
-  "version": "0.0.2",
-  "minimumCoreVersion": "0.6.5",
-  "compatibleCoreVersion": "9",
-  "author": "Steve Barnett",
-  "system": "dcc",
+  "version": "0.0.3",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
+  "minimumCoreVersion": "10",
+  "authors": [
+    {
+      "name": "Steve Barnett"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dcc",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [],
+    "conflicts": []
+  },
   "esmodules": ["module/dcc-kith.js"],
   "styles": [],
   "languages": [
@@ -18,6 +36,6 @@
   ],
   "url": "https://github.com/mooped/foundryvtt-dcc-kith",
   "manifest": "https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json",
-  "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.2.zip",
+  "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.3.zip",
   "license": "LICENSE.txt"
 }
