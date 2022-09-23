@@ -35,7 +35,7 @@
     }
   ],
   "url": "https://github.com/mooped/foundryvtt-dcc-kith",
-  "manifest": "https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json",
+  "manifest": "https://raw.githubusercontent.com/mooped/foundryvtt-dcc-kith/main/module.json",
   "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.3.zip",
   "license": "LICENSE.txt"
 }
