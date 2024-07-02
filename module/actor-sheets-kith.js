@@ -18,7 +18,7 @@ class ActorSheetKith extends DCCActorSheet {
     // Add in Kith specific data if missing
     if (!data.system.skills.tracking) {
       this.actor.update({
-        'data.skills.tracking': {
+        'system.skills.tracking': {
           label: 'Kith.Tracking',
           value: '+1'
         }
@@ -26,7 +26,7 @@ class ActorSheetKith extends DCCActorSheet {
     }
     if (!data.system.skills.detectTraps) {
       this.actor.update({
-        'data.skills.detectTraps': {
+        'system.skills.detectTraps': {
           label: 'Kith.DetectTraps',
           value: '+1'
         }
@@ -34,7 +34,7 @@ class ActorSheetKith extends DCCActorSheet {
     }
     if (!data.system.skills.detectHiddenFoes) {
       this.actor.update({
-        'data.skills.detectHiddenFoes': {
+        'system.skills.detectHiddenFoes': {
           label: 'Kith.DetectHiddenFoes',
           value: '+1'
         }
@@ -42,7 +42,7 @@ class ActorSheetKith extends DCCActorSheet {
     }
     if (!data.system.skills.burnDie) {
       this.actor.update({
-        'data.skills.burnDie': {
+        'system.skills.burnDie': {
           label: 'Kith.BurnDie',
           die: '1d3'
         }
@@ -51,8 +51,8 @@ class ActorSheetKith extends DCCActorSheet {
 
     if (data.system.details.sheetClass != 'Kith') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('Kith.ActorSheetKith'),
-        'data.details.sheetClass': 'Kith'
+        'system.class.className': game.i18n.localize('Kith.ActorSheetKith'),
+        'system.details.sheetClass': 'Kith'
       })
     }
 
